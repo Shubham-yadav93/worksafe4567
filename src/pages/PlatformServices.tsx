@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import {Shield, Users, Heart, Zap, Phone, Monitor, AlertCircle, Clock, CheckCircle, ArrowRight, Crown, Star} from 'lucide-react'
+import { Users,  Phone,  CheckCircle, ArrowRight, Crown} from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -18,46 +18,45 @@ const PlatformServices = () => {
       icon: Users,
       color: 'from-blue-600 to-blue-700'
     },
-    {
-      id: 'senior',
-      title: 'Senior Citizen Safety',
-      icon: Heart,
-      color: 'from-red-600 to-red-700'
-    }
+    // {
+    //   id: 'senior',
+    //   title: 'Senior Citizen Safety',
+    //   icon: Heart,
+    //   color: 'from-red-600 to-red-700'
+    // }
   ]
 
   const workforceBasicFeatures = [
-    'Panic Alert Services: In a panic situation, your emergency contacts will be informed together with your location details.',
-    'PoSH: Electronically gather proof of workplace sexual harassment.',
-    'Corporate News Board: Current business announcements and other noteworthy news.',
-    'Roadside Assistance: In the event of a vehicle breakdown, or roadside risks, we offer assistance 24/7.',
-    'Home Watch: You can watch your house or your loved ones from anywhere, anytime.',
-    'Locate Me: Find the people closest to you in real-time.',
-    'What\'s Nearby: Information on emergency services like Hospitals, Blood banks, ATMs, etc is available with just a click.',
-    'Customer Support: We are available for support via email and our toll-free number 1800 210 4567.'
+    '24/7 Safety Station (Unlimited Access) ',
+    'Emergency SOS (Unlimited Access)',
+    'Roadside Assistance (Unlimited Access)',
+    'Lost & Return QR (Only 2 QR Codes)',
+    'Posh (Unlimited Access)',
+    'Travel Safe (Unlimited Access)',
+    'News Board (Unlimited Access)',
   ]
 
   const workforceAdvancedFeatures = [
-    '24/7 Safety Command Station: The core hub of our services, operational 24/7.',
-    'Emergency SOS (voice activated): Obtain immediate assistance in any emergency.',
-    'Mircofin: Find your misplaced personal items and get them back.',
-    'Ambulance Service: Call for help in case of a medical emergency.',
-    'Travel Safe: If you\'re going anywhere alone, have a safety companion.',
-    'Personal Counselling: Seek professional online guidance on mental health concerns.'
+   '24/7 Safety Station (Unlimited Access) ',
+    'Emergency SOS (Unlimited Access)',
+    'Roadside Assistance (Unlimited Access)',
+    'Lost & Return QR (Only 4 QR Codes)',
+    'Posh (Unlimited Access)',
+    'Travel Safe (Unlimited Access)',
+    'News Board (Unlimited Access)',
+    'Ambulance (1 Free Service)',
   ]
 
   const seniorBasicFeatures = [
-    '24/7 Senior Citizen Safety Station: The core hub of our services, open 24/7. Always awake.',
-    'Emergency SOS (voice activated): Obtain immediate assistance in any emergency.',
-    'Fall Detection: To detect when a fall occurs and automatically send an alert to an emergency Contacts.',
-    'Travel Safe: If you\'re going anywhere alone, have a safety companion.',
-    'Activity Reminder: An automated daily reminder of the various activities like medication, food, sleep, walking, BP Monitoring, etc.',
-    'Roadside Assistance: In the event of a vehicle breakdown, or roadside risks, we offer assistance 24/7.',
-    'Home Watch: You can watch your house or your loved ones from anywhere, anytime.',
-    'Locate Me: Find the people closest to you in real-time.',
-    'What\'s Nearby: Information on emergency services like Hospitals, Blood banks, ATMs, etc is available with just a click.',
-    'Community News Board: One can share valuable updates or receive information in text, video, or audio on various facets for better living.',
-    'Customer Support: We are available for support via email and our toll-free number 1800 210 4567.'
+    '24/7 Safety Station (Unlimited Access) ',
+    'Emergency SOS (Unlimited Access)',
+    'Roadside Assistance (Unlimited Access)',
+    'Lost & Return QR (Only 4 QR Codes)',
+    'Posh (Unlimited Access)',
+    'Travel Safe (Unlimited Access)',
+    'News Board (Unlimited Access)',
+    'Fall Detection: Automatic fall alert system',
+    'Activity Reminder: Daily activity notifications',
   ]
 
   const seniorAdvancedFeatures = [
@@ -69,38 +68,26 @@ const PlatformServices = () => {
   // Combined features for the new Advanced plan
   const combinedAdvancedFeatures = [
     // Workforce Wellbeing features
-    'Panic Alert Services: Emergency contacts informed with location details',
-    'PoSH: Electronic workplace harassment proof gathering',
-    'Corporate News Board: Business announcements and news',
-    '24/7 Safety Command Station: Core operational hub',
-    'Emergency SOS (voice activated): Immediate assistance',
-    'Mircofin: Personal item recovery service',
-    'Travel Safe: Safety companion for solo travel',
-    'Personal Counselling: Professional mental health guidance',
-    
-    // Senior Citizen Safety features
-    '24/7 Senior Citizen Safety Station: Dedicated senior support hub',
-    'Fall Detection: Automatic fall alert system',
-    'Activity Reminder: Daily activity notifications',
-    'Community News Board: Information sharing platform',
-    'Mira QR: Advanced item recovery system',
-    
-    // Common features
-    'Roadside Assistance: 24/7 vehicle breakdown support',
-    'Home Watch: Remote monitoring capabilities',
-    'Locate Me: Real-time location services',
-    'What\'s Nearby: Emergency services information',
-    'Ambulance Service: Medical emergency response',
-    'Customer Support: Email and toll-free support'
+  '24/7 Safety Station (Unlimited Access) ',
+    'Emergency SOS (Unlimited Access)',
+    'Roadside Assistance (Unlimited Access)',
+    'Lost & Return QR (Only 4 QR Codes)',
+    'Posh (Unlimited Access)',
+    'Travel Safe (Unlimited Access)',
+    'News Board (Unlimited Access)',
+    'Ambulance (1 Free Service)',
+    'Health & Wellness (Unlimited Access)',
+    'HRMS (Unlimited Access)',
   ]
 
   const clients = [
-    { name: 'TCS', logo: 'https://logos-world.net/wp-content/uploads/2020/09/Tata-Consultancy-Services-TCS-Logo.png' },
-    { name: 'Tata', logo: 'https://logos-world.net/wp-content/uploads/2020/11/Tata-Logo.png' },
-    { name: 'Apple', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png' },
-    { name: 'Microsoft', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Microsoft-Logo.png' },
-    { name: 'Google', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Google-Logo.png' },
-    { name: 'Amazon', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png' }
+    { name: 'HUL', logo: "https://i.ibb.co/GQXB8MGB/hindustan-uniliver-limited-logo-png-seeklogo-304694.png" },
+    { name: 'Godrej', logo: "https://i.ibb.co/gFVWTFxL/Godrej-Logo-svg.png" },
+    { name: 'Great Eastern Shipping', logo: "https://i.ibb.co/S7GSdZKD/The-Great-Eastern-Shipping-Company-Limited-2-removebg-preview.png" },
+    { name: 'Grihum Housing Finance', logo: "https://i.ibb.co/FrZ5Pjr/images.jpg" },
+    { name: 'Godrej', logo: "https://i.ibb.co/gFVWTFxL/Godrej-Logo-svg.png" },
+     { name: 'Grihum Housing Finance', logo: "https://i.ibb.co/FrZ5Pjr/images.jpg" },
+    
   ]
 
   return (
@@ -208,7 +195,7 @@ const PlatformServices = () => {
                 {/* Subscription Plans */}
                 <div ref={plansRef} className="mb-16">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Basic Plan */}
+                    {/* Essential Plan */}
                     <motion.div
                       className="bg-white border-2 border-gray-300 rounded-2xl p-8 shadow-lg"
                       initial={{ opacity: 0, x: -50 }}
@@ -216,29 +203,23 @@ const PlatformServices = () => {
                       transition={{ duration: 0.8 }}
                     >
                       <div className="text-center mb-8">
-                        <Crown className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Basic</h3>
-                        <div className="text-4xl font-bold text-blue-600 mb-4">₹2,000</div>
-                        <p className="text-gray-600">per month</p>
+                        
+                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Essential</h3>
+                        {/* <div className="text-4xl font-bold text-blue-600 mb-4">₹2,000</div>
+                        <p className="text-gray-600">per month</p> */}
                       </div>
                       <ul className="space-y-4">
                         {workforceBasicFeatures.map((feature, index) => (
                           <li key={index} className="flex items-start space-x-3">
                             <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700 text-sm">{feature}</span>
+                            <span className="text-gray-700 text-sm font-medium">{feature}</span>
                           </li>
                         ))}
                       </ul>
-                      <motion.button
-                        className="w-full mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        Choose Basic Plan
-                      </motion.button>
+                    
                     </motion.div>
 
-                    {/* Premium Plan */}
+                    {/* Elevate Plan */}
                     <motion.div
                       className="bg-white border-2 border-red-500 rounded-2xl p-8 shadow-lg relative"
                       initial={{ opacity: 0, y: -50 }}
@@ -247,76 +228,72 @@ const PlatformServices = () => {
                     >
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          RECOMMENDED
+                          Popular
                         </div>
                       </div>
-                      <div className="text-center mb-8">
-                        <Crown className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Premium</h3>
-                        <div className="text-4xl font-bold text-red-600 mb-4">₹5,000</div>
-                        <p className="text-gray-600">per month</p>
+                      <div className="text-center mb-7">
+                       
+                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Elevate</h3>
+                        {/* <div className="text-4xl font-bold text-red-600 mb-4">₹5,000</div>
+                        <p className="text-gray-600">per month</p> */}
                       </div>
-                      <div className="mb-6">
-                        <p className="text-sm text-gray-600 mb-4">Includes all Basic features plus:</p>
+                      <div className="mb-2">
+                        <p className="text-sm text-gray-800 font-medium mb-3">Includes all Essential features plus:</p>
                         <ul className="space-y-3">
                           {workforceAdvancedFeatures.map((feature, index) => (
                             <li key={index} className="flex items-start space-x-3">
-                              <Star className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                              <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                               <span className="text-gray-700 text-sm font-medium">{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <motion.button
+                      {/* <motion.button
                         className="w-full mt-8 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
                         Choose Premium Plan
-                      </motion.button>
+                      </motion.button> */}
                     </motion.div>
 
                     {/* Advanced Combined Plan */}
                     <motion.div
-                      className="bg-white border-2 border-purple-500 rounded-2xl p-8 shadow-lg relative"
+                      className="bg-white border-2  rounded-2xl p-8 shadow-lg relative"
                       initial={{ opacity: 0, x: 50 }}
                       animate={plansInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ duration: 0.8, delay: 0.4 }}
                     >
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                          ULTIMATE
-                        </div>
+                        
                       </div>
                       <div className="text-center mb-8">
-                        <Crown className="w-12 h-12 text-purple-500 mx-auto mb-4" />
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Advanced</h3>
-                        <div className="text-4xl font-bold text-purple-600 mb-4">₹8,999</div>
-                        <p className="text-gray-600">per month</p>
+                       
+                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Elite</h3>
+                        {/* <div className="text-4xl font-bold text-blue-600 mb-4">₹8,999</div>
+                        <p className="text-gray-600">per month</p> */}
                       </div>
                       <div className="mb-6">
-                        <p className="text-sm text-gray-600 mb-4">Complete safety solution combining workforce & senior care:</p>
-                        <div className="max-h-64 overflow-y-auto">
+                        <p className="text-sm text-gray-900 mb-4 font-medium">Complete safety solution </p>
+                        <div className="max-h-64 ">
                           <ul className="space-y-2">
-                            {combinedAdvancedFeatures.slice(0, 8).map((feature, index) => (
+                            {combinedAdvancedFeatures.map((feature, index) => (
                               <li key={index} className="flex items-start space-x-2">
-                                <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-1 py-0.5 rounded text-xs font-semibold flex-shrink-0">
-                                  ALL
-                                </div>
-                                <span className="text-gray-700 text-xs">{feature}</span>
+                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-900 text-xs font-medium">{feature}</span>
                               </li>
                             ))}
                           </ul>
-                          <p className="text-xs text-gray-500 mt-2">+ {combinedAdvancedFeatures.length - 8} more features</p>
+                          
                         </div>
                       </div>
-                      <motion.button
+                      {/* <motion.button
                         className="w-full mt-8 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
                         Choose Advanced Plan
-                      </motion.button>
+                      </motion.button> */}
                     </motion.div>
                   </div>
                   
@@ -386,7 +363,7 @@ const PlatformServices = () => {
                       transition={{ duration: 0.8 }}
                     >
                       <div className="text-center mb-8">
-                        <Crown className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+                        
                         <h3 className="text-3xl font-bold text-gray-900 mb-2">Basic</h3>
                         <div className="text-4xl font-bold text-red-600 mb-4">₹3,000</div>
                         <p className="text-gray-600">per month</p>
@@ -516,21 +493,21 @@ const PlatformServices = () => {
             <motion.div
               className="flex space-x-16 items-center"
               animate={{
-                x: [0, -100 * clients.length]
+                x: [0, -clients.length*180]
               }}
               transition={{
                 duration: 20,
                 repeat: Infinity,
                 ease: "linear"
               }}
-              style={{ width: `${200 * clients.length * 2}px` }}
+              style={{ width: `${20 * clients.length * 2.5}px` }}
             >
               {/* First set of logos */}
               {clients.map((client, index) => (
                 <motion.div
                   key={`first-${index}`}
                   className="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.5 }}
                 >
                   <img
                     src={client.logo}
@@ -544,7 +521,7 @@ const PlatformServices = () => {
                 <motion.div
                   key={`second-${index}`}
                   className="flex-shrink-0 w-32 h-20 flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.5 }}
                 >
                   <img
                     src={client.logo}
@@ -553,6 +530,7 @@ const PlatformServices = () => {
                   />
                 </motion.div>
               ))}
+              
             </motion.div>
           </div>
         </div>

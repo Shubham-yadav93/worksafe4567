@@ -8,7 +8,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Workforce Wellbeing', path: '/platform-services' },
     { name: 'Senior Citizen Safety', path: '/platform-services' },
-    { name: 'CAPTAIN INDIA', path: 'https://captain-india.com' }
+    { name: 'Captain India', path: 'https://captain-india.com' }
   ]
 
   const otherLinks = [

@@ -11,7 +11,6 @@ import {
   Clock,
   Globe,
   Shield,
-  CheckCircle,
   ExternalLink,
 } from "lucide-react";
 import Header from "../components/Header";
@@ -143,7 +142,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["support@worksafe4567.com"],
+      details: ["support@Zimaxxtech.com"],
       color: "from-red-500 to-red-600",
       hoverColor: "hover:from-red-600 hover:to-red-700",
     },
@@ -323,8 +322,8 @@ const Contact = () => {
                   >
                     <option value="">Select a subject</option>
                     <option value="General Inquiry">General Inquiry</option>
-                    <option value="Workforce Wellbeing">
-                      Workforce Wellbeing
+                    <option value="WorkSafe 24/7">
+                      WorkSafe 24/7
                     </option>
                     <option value="Captain India : Pet Happiness & Safety">
                       Captain India : Pet Happiness & Safety
