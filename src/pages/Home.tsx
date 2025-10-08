@@ -49,7 +49,7 @@ const Home = () => {
   const heroSlides = [
     {
       src: "https://images.pexels.com/photos/5668856/pexels-photo-5668856.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Workforce Safety 24/7:",
+      title: "WorkfSafe 24/7:",
       subtitle: "Always On",
       description: "India’s First Workforce Safety and Wellness Partner",
     },
