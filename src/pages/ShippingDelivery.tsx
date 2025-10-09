@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -63,43 +62,6 @@ const ShippingDelivery = () => {
 
               <p>
                 We reserve the right to cancel your order at its sole discretion in cases where it takes longer than usual delivery time or the shipment is physically untraceable and refund the amount paid for cancelled product(s) to your source account.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Order Processing</h3>
-              <p>
-                Orders are processed within 1-2 business days after payment confirmation. You will receive an email confirmation with order details and tracking information once your order has been dispatched.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Shipping Charges</h3>
-              <p>
-                Shipping charges may vary based on the delivery location and product type. Any applicable shipping charges will be displayed during checkout before payment confirmation.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Delivery Areas</h3>
-              <p>
-                We currently deliver across major cities in India. For specific delivery availability in your area, please contact our customer support team at 1800 210 4567.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Tracking Your Order</h3>
-              <p>
-                Once your order is shipped, you will receive a tracking number via email and SMS. You can use this tracking number to monitor your shipment status on our website or the courier partner's website.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Delivery Issues</h3>
-              <p>
-                In case of any delivery issues such as damaged products, missing items, or delayed delivery, please contact our customer support team immediately. We will work to resolve the issue promptly.
-              </p>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Contact for Delivery Support</h3>
-              <div className="bg-gray-50 p-4 rounded-lg mt-4">
-                <p><strong>Customer Support</strong></p>
-                <p>Phone: 1800 210 4567</p>
-                <p>Email: support@worksafe4567.com</p>
-                <p>Working Hours: Monday to Friday, 9:00 AM to 6:00 PM</p>
-              </div>
-
-              <p className="text-sm text-gray-500 mt-8">
-                <strong>Last updated:</strong> December 2024
               </p>
             </div>
           </motion.div>
