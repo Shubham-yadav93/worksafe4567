@@ -14,7 +14,7 @@ const PlatformServices = () => {
   const tabs = [
     {
       id: 'workforce',
-      title: 'Workforce Wellbeing',
+      title: 'WorkSafe 24/7',
       icon: Users,
       color: 'from-blue-600 to-blue-700'
     },
@@ -67,7 +67,7 @@ const PlatformServices = () => {
 
   // Combined features for the new Advanced plan
   const combinedAdvancedFeatures = [
-    // Workforce Wellbeing features
+    // WorkSafe 24/7 features
   '24/7 Safety Station (Unlimited Access) ',
     'Emergency SOS (Unlimited Access)',
     'Roadside Assistance (Unlimited Access)',
@@ -160,7 +160,7 @@ const PlatformServices = () => {
                 {/* Service Introduction */}
                 <div className="text-center mb-16">
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    Services for Corporate <span className="text-blue-600 underline decoration-blue-600">Workforce Wellbeing</span>
+                    Services for Corporate <span className="text-blue-600 underline decoration-blue-600">WorkSafe 24/7</span>
                   </h2>
                   <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
                     We provide internalized Basic and Advanced Services to support the corporate workforce's safety needs.

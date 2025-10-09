@@ -205,25 +205,25 @@ const BlogDetail = () => {
       icon: Facebook, 
       name: 'Facebook', 
       color: 'bg-blue-600 hover:bg-blue-700',
-      url: `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`
+      url: "https://www.facebook.com/WorkSafe247"
     },
     { 
       icon: Twitter, 
       name: 'Twitter', 
       color: 'bg-blue-400 hover:bg-blue-500',
-      url: `https://twitter.com/intent/tweet?url=${window.location.href}&text=${encodeURIComponent(currentPost.title)}`
+      url: "https://x.com/WorkSafe24_7"
     },
     { 
       icon: Linkedin, 
       name: 'LinkedIn', 
       color: 'bg-blue-700 hover:bg-blue-800',
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`
+      url: "https://www.linkedin.com/company/worksafe247/"
     },
     { 
       icon: MessageCircle, 
-      name: 'WhatsApp', 
-      color: 'bg-green-500 hover:bg-green-600',
-      url: `https://wa.me/?text=${encodeURIComponent(currentPost.title + ' ' + window.location.href)}`
+      name: 'Instagram', 
+      color: 'bg-pink-500 hover:bg-pink-600',
+      url: "https://www.instagram.com/worksafe24_7?igsh=eWFvZ3RwZXB4aG9x"
     },
     { 
       icon: Mail, 

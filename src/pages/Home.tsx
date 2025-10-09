@@ -480,13 +480,13 @@ const Home = () => {
                     Technology-enabled senior care offers emergency response
                     services for life safety.
                   </p>
-                  <Link
+                  {/* <Link
                     to="/platform-services"
                     className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors text-sm sm:text-base touch-manipulation"
                   >
                     Learn More{" "}
                     <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </motion.div>

@@ -1,32 +1,55 @@
-
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram} from 'lucide-react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Workforce Wellbeing', path: '/platform-services' },
-    { name: 'Senior Citizen Safety', path: '/platform-services' },
-    { name: 'Captain India', path: 'https://captain-india.com' }
-  ]
+    { name: "WorkSafe 24/7", path: "/platform-services" },
+    { name: "Senior Citizen Safety", path: "/platform-services" },
+    { name: "Captain India", path: "https://captain-india.com" },
+  ];
 
   const otherLinks = [
-    { name: 'About Us', path: '/about-us' },
-    { name: 'Contact Us', path: '/contact' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms & Conditions', path: '/terms-conditions' },
-    { name: 'Shipping And Delivery', path: '/shipping-delivery' },
-    { name: 'Return & Refund Policy', path: '/return-refund' }
-  ]
+    { name: "About Us", path: "/about-us" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Blog", path: "/blog" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms & Conditions", path: "/terms-conditions" },
+    { name: "Shipping And Delivery", path: "/shipping-delivery" },
+    { name: "Return & Refund Policy", path: "/return-refund" },
+  ];
 
   const socialIcons = [
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { icon: Facebook, href: '#', color: 'hover:text-blue-700' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-600' }
-  ]
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/worksafe247/",
+      color: "hover:text-blue-600",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/WorkSafe24_7",
+      color: "hover:text-blue-400",
+    },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/WorkSafe247",
+      color: "hover:text-blue-700",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/worksafe24_7?igsh=eWFvZ3RwZXB4aG9x",
+      color: "hover:text-pink-600",
+    },
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -47,37 +70,39 @@ const Footer = () => {
                   alt="WorkSafe 24/7 Logo"
                   className="h-16 sm:h-20 w-auto drop-shadow-md mb-4"
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ 
-                    scale: 1, 
+                  animate={{
+                    scale: 1,
                     opacity: 1,
-                     filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))",
-                    y: [0, -2, 0]
+                    filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))",
+                    y: [0, -2, 0],
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 0.8,
                     y: {
                       duration: 2,
                       repeat: Infinity,
-                      ease: "easeInOut"
-                    }
+                      ease: "easeInOut",
+                    },
                   }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                     filter: "drop-shadow(0 0 20px rgba(255, 255,255, 1.5))",
-                    transition: { duration: 0.3 }
+                    filter: "drop-shadow(0 0 20px rgba(255, 255,255, 1.5))",
+                    transition: { duration: 0.3 },
                   }}
                   whileTap={{ scale: 0.95 }}
                 />
               </Link>
             </motion.div>
-            
+
             <motion.p
               className="text-gray-300 mb-6 leading-relaxed text-sm sm:text-base text-center sm:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Pioneering social impact startup dedicated to humanizing safety for humans and pets with advanced AI, IoT, and cloud solutions.
+              Pioneering social impact start-up enhancing human and pet safety
+              through advanced technology and 24/7 real-time safety alert
+              services for complete peace of mind.
             </motion.p>
 
             {/* Social Icons */}
@@ -119,7 +144,6 @@ const Footer = () => {
                 >
                   <Link
                     to={link.path}
-                    
                     className="text-gray-300 hover:text-red-400 transition-colors duration-300 block py-1 text-sm sm:text-base touch-manipulation"
                   >
                     {link.name}
@@ -169,7 +193,7 @@ const Footer = () => {
               <MapPin className="inline w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Address
             </motion.h4>
-            
+
             <motion.div
               className="space-y-3 sm:space-y-4"
               initial={{ opacity: 0, y: 20 }}
@@ -185,12 +209,16 @@ const Footer = () => {
 
               <div className="flex items-center justify-center sm:justify-start space-x-2 text-gray-300">
                 <Phone className="w-4 h-4 text-red-400 flex-shrink-0" />
-                <span className="text-sm sm:text-base">Toll-Free: 1800 210 4567</span>
+                <span className="text-sm sm:text-base">
+                  Toll-Free: 1800 210 4567
+                </span>
               </div>
 
               <div className="flex items-center justify-center sm:justify-start space-x-2 text-gray-300">
                 <Mail className="w-4 h-4 text-red-400 flex-shrink-0" />
-                <span className="text-sm sm:text-base break-all sm:break-normal">support@Zimaxxtech.com</span>
+                <span className="text-sm sm:text-base break-all sm:break-normal">
+                  support@Zimaxxtech.com
+                </span>
               </div>
             </motion.div>
           </div>
@@ -204,12 +232,13 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs sm:text-sm">
-           Copyright &copy; 2025 Zimaxx Tech. All rights reserved. | Powered by Zimaxx Tech Solutions
+            Copyright &copy; 2025 Zimaxx Tech. All rights reserved. | Powered by
+            Zimaxx Tech Solutions
           </p>
         </motion.div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

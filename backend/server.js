@@ -88,13 +88,13 @@ app.post('/api/send', async (req, res) => {
 
   // Auto-reply email to user
   const userMailOptions = {
-    from: `"Dial:4567" <${process.env.EMAIL_USER}>`,
+    from: `"WorkSafe 24/7" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: 'Dear ' + name.split(' ')[0] + ', Thank You for your Enquiry.',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); padding: 30px; text-align: center;">
-          <h1 style="color: white; margin: 0; font-size: 28px;">Dial:4567</h1>
+          <h1 style="color: white; margin: 0; font-size: 28px;">WorkSafe 24/7</h1>
           <p style="color: #dbeafe; margin: 10px 0 0 0;">WorkSafe Solutions</p>
         </div>
         
@@ -111,7 +111,7 @@ app.post('/api/send', async (req, res) => {
             <h3 style="color: #1e40af; margin-top: 0; font-size: 16px;">What happens next?</h3>
             <ul style="color: #4b5563; line-height: 1.8; margin: 10px 0; padding-left: 20px;">
               <li>Our team will review your enquiry</li>
-              <li>We'll contact you within 2 hours during business hours</li>
+              <li>We'll contact you soon during business hours.</li>
               <li>For emergencies, call us at <strong>1800 210 4567</strong></li>
             </ul>
           </div>
@@ -132,7 +132,7 @@ app.post('/api/send', async (req, res) => {
           
           <p style="color: #4b5563; line-height: 1.8; font-size: 16px; margin: 30px 0 20px 0;">
             With Regards<br>
-            <strong style="color: #1f2937;">Team Dial: 4567</strong>
+            <strong style="color: #1f2937;">Team WorkSafe 24/7</strong>
           </p>
         </div>
         
@@ -146,10 +146,10 @@ app.post('/api/send', async (req, res) => {
           
           <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e5e7eb;">
             <p style="color: #9ca3af; font-size: 12px; margin: 5px 0;">
-              45, Chimbai Rd, Bandra West, Mumbai 400050
+               Bandra West, Mumbai 400050
             </p>
             <p style="color: #9ca3af; font-size: 12px; margin: 5px 0;">
-              📧 support@worksafe4567.com | 🌐 Available 24/7
+              📧 support@Zimaxxtech.com.com | 🌐 Available 24/7
             </p>
           </div>
         </div>

@@ -83,7 +83,7 @@ const Header = () => {
                 >
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.div>
-                <span className="text-xs sm:text-sm hidden sm:inline">
+                <span className="text-xs sm:text-sm  sm:inline">
                   support@Zimaxxtech.com
                 </span>
               </motion.div>
