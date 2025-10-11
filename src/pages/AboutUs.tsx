@@ -13,18 +13,15 @@ const AboutUs = () => {
   };
 
   const staggerContainer = {
+    initial: { opacity: 0 },
     animate: {
+      opacity: 1,
       transition: {
         staggerChildren: 0.2,
+        delayChildren: 0.1,
       },
     },
   };
-
-  // const scaleIn = {
-  //   initial: { opacity: 0, scale: 0.8 },
-  //   animate: { opacity: 1, scale: 1 },
-  //   transition: { duration: 0.8 }
-  // }
 
   return (
     <div className="min-h-screen bg-white">
@@ -82,7 +79,8 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Who are <span className="text-red-600">we?</span>
+              What do we{" "}
+             <span className="text-red-600">do?</span>
             </h2>
             <div className="w-24 h-1 bg-red-500 mx-auto"></div>
           </motion.div>
@@ -109,16 +107,11 @@ const AboutUs = () => {
               viewport={{ once: true }}
             >
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                We are a pioneering social impact start-up dedicated to
-                humanizing safety for Humans and Pets. With our subscription-
-                based offerings, we utilize advanced technology in a state-of-
-                the-art 24/7 Safety Station to deliver exceptional life safety
-                services, providing our clients with real-time safety alert
-                services and unmatched peace of mind.
+                We are a passionate social impact startup dedicated to making safety more personal for people and pets. Through our subscription services, we utilize innovative technology in our advanced 24/7 Safety Station to deliver top-quality life safety services and solutions, providing our clients with real-time response capabilities.
               </p>
 
               <div className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Shield className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
@@ -176,7 +169,7 @@ const AboutUs = () => {
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-red-600 mb-2">
-                    2022 
+                    2022
                   </div>
                   <div className="text-gray-600">Incorporated</div>
                 </div>
@@ -200,11 +193,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
+      {/* Vision & Mission Section - FIXED */}
       <section className="py-20 sm:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
+            className="grid lg:grid-cols-2 gap-12 lg:gap-20 lg:items-stretch"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -212,11 +205,11 @@ const AboutUs = () => {
           >
             {/* Vision */}
             <motion.div
-              className="text-center lg:text-left"
+              className="flex flex-col text-center lg:text-left"
               variants={fadeInUp}
             >
               <div className="flex items-center justify-center lg:justify-start mb-8">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Eye className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -224,7 +217,7 @@ const AboutUs = () => {
                 </h3>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <div className="bg-white p-8 rounded-2xl shadow-xl flex-grow flex items-center justify-center">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   We imagine a world where every person and pet lives safe,
                   healthy, and worry-free.
@@ -234,11 +227,11 @@ const AboutUs = () => {
 
             {/* Mission */}
             <motion.div
-              className="text-center lg:text-left"
+              className="flex flex-col text-center lg:text-left"
               variants={fadeInUp}
             >
               <div className="flex items-center justify-center lg:justify-start mb-8">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <Target className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -246,7 +239,7 @@ const AboutUs = () => {
                 </h3>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <div className="bg-white p-8 rounded-2xl shadow-xl flex-grow flex items-center justify-center">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   To provide affordable technology access to people and pets,
                   keeping them happy and safe forever, through innovative
@@ -267,8 +260,8 @@ const AboutUs = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Discover Safety Innovation?
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">
+              Ready to Discover Safety Innovation
             </h2>
             <p className="text-xl text-red-100 mb-8 leading-relaxed">
               Join thousands of satisfied customers who trust us for their
@@ -278,7 +271,7 @@ const AboutUs = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/platform-services"
+                to="https://worksafe4567.vercel.app/platform-services"
                 className="inline-flex items-center justify-center space-x-3 bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
                 <span>Our Services</span>

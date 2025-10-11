@@ -100,9 +100,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Pioneering social impact start-up enhancing human and pet safety
-              through advanced technology and 24/7 real-time safety alert
-              services for complete peace of mind.
+           Innovative technology in our advanced 24/7 Safety Station delivers top-quality life safety services and solutions, providing our clients with real-time response capabilities.
             </motion.p>
 
             {/* Social Icons */}

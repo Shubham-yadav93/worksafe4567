@@ -40,29 +40,23 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // // Typewriter effect state
-  // const [displayText, setDisplayText] = useState("");
-  // const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  // const fullText = "AI, IoT, VA, and Cloud Solutions";
-  // const words = ["AI,", "IoT,", "VA,", "and", "Cloud", "Solutions"];
-
   const heroSlides = [
     {
-      src: "https://images.pexels.com/photos/5668856/pexels-photo-5668856.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "WorkfSafe 24/7:",
+      src: "https://images.pexels.com/photos/7792818/pexels-photo-7792818.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      title: "WorkfSafe 24/7",
       subtitle: "Always On",
-      description: "India’s First Workforce Safety and Wellness Partner",
+      description: "India's First Workforce Safety and Wellbeing Partner",
     },
     {
       src: "https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      title: "Senior Citizen Safety:",
+      title: "Senior Citizen Safety",
       subtitle: " Har Waqt Appke Saath",
-      description: "Tech-enabled safety services 24/7 ",
+      description: "Tech-Enabled Safety Services 24/7",
     },
     {
       src: "https://i.ibb.co/0jSJJCp7/Captain-India.webp",
-      title: "Captain India Pet Happiness and Safety:",
-      subtitle: "Your Pet's Safety Superhero An ecosystem for pet care",
+      title: "Captain India Pet Happiness and Safety",
+      subtitle: "Your Pet's Superhero",
       description: "",
       link: "captain-india.com",
     },
@@ -118,24 +112,6 @@ const Home = () => {
     },
   ];
 
-  // Typewriter effect
-  // useEffect(() => {
-  //   if (heroInView && currentWordIndex < words.length) {
-  //     const timer = setTimeout(
-  //       () => {
-  //         setDisplayText((prev) => {
-  //           const nextWord = words[currentWordIndex];
-  //           return prev ? `${prev} ${nextWord}` : nextWord;
-  //         });
-  //         setCurrentWordIndex((prev) => prev + 1);
-  //       },
-  //       currentWordIndex === 0 ? 800 : 400
-  //     ); // Delay for first word, then faster
-
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [heroInView, currentWordIndex, words]);
-
   // Auto-play functionality
   useEffect(() => {
     if (isAutoPlaying) {
@@ -186,8 +162,6 @@ const Home = () => {
             >
               Trusted Partner for Life Safety: People and Pets
             </motion.h1>
-
-          
 
             <motion.p
               className="text-base sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto px-4"
@@ -426,7 +400,7 @@ const Home = () => {
             >
               <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/5668856/pexels-photo-5668856.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="https://images.pexels.com/photos/7792818/pexels-photo-7792818.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="WorkSafe 24/7"
                   className="w-full h-64 sm:h-96 object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -440,7 +414,7 @@ const Home = () => {
                     analytics and real-time response management.
                   </p>
                   <Link
-                    to="/platform-services"
+                    to="https://worksafe4567.vercel.app/platform-services"
                     className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors text-sm sm:text-base touch-manipulation"
                   >
                     Learn More{" "}
@@ -452,7 +426,7 @@ const Home = () => {
 
             {/* Senior Citizen Safety Card */}
             <motion.div
-              className="relative group cursor-pointer"
+              className="relative group cursor-pointer opacity-60"
               initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
               animate={
                 servicesInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}
@@ -472,21 +446,23 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
-                  <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 text-red-400">
-                    SENIOR CITIZEN SAFETY{" "}
-                    <span className="text-white">(coming Soon...)</span>
-                  </h3>
-                  <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
+                  <div className="flex items-center gap-3 mb-2 sm:mb-4">
+                    <h3 className="text-lg sm:text-2xl font-bold text-red-400">
+                      SENIOR CITIZEN SAFETY
+                    </h3>
+                    <motion.span
+                      className="bg-amber-400 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap"
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
+                      Coming Soon
+                    </motion.span>
+                  </div>
+                  <p className="text-gray-300 text-sm sm:text-base">
                     Technology-enabled senior care offers emergency response
                     services for life safety.
                   </p>
-                  {/* <Link
-                    to="/platform-services"
-                    className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors text-sm sm:text-base touch-manipulation"
-                  >
-                    Learn More{" "}
-                    <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                  </Link> */}
                 </div>
               </div>
             </motion.div>
@@ -641,9 +617,11 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default Home;
+

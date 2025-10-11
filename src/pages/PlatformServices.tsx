@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { Link } from "react-router-dom";
 import { Users,  Phone,  CheckCircle, ArrowRight, Crown} from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -216,7 +217,15 @@ const PlatformServices = () => {
                           </li>
                         ))}
                       </ul>
-                    
+                    {/* <Link to="/contact">
+                      <motion.button
+                        className="w-full mt-8 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        Contact us
+                      </motion.button>
+                      </Link> */}
                     </motion.div>
 
                     {/* Elevate Plan */}
@@ -248,13 +257,15 @@ const PlatformServices = () => {
                           ))}
                         </ul>
                       </div>
-                      {/* <motion.button
+                      {/* <Link to="/contact">
+                      <motion.button
                         className="w-full mt-8 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        Choose Premium Plan
-                      </motion.button> */}
+                        Contact us
+                      </motion.button>
+                      </Link> */}
                     </motion.div>
 
                     {/* Advanced Combined Plan */}
@@ -287,22 +298,41 @@ const PlatformServices = () => {
                           
                         </div>
                       </div>
-                      {/* <motion.button
-                        className="w-full mt-8 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                   {/* <Link to="/contact">
+                      <motion.button
+                        className="w-full mt-8 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        Choose Advanced Plan
-                      </motion.button> */}
+                        Contact us
+                      </motion.button>
+                      </Link> */}
                     </motion.div>
                   </div>
-                  
+                   
                   <div className="text-center mt-8">
                     <p className="text-gray-600">
                       To access Advanced services, a subscription is required. If not subscribed, these services will be{' '}
                       <span className="underline font-semibold">viewable but not usable</span>.
                     </p>
                   </div>
+                   <div className="flex justify-center">
+                      <Link to="/contact">
+                        <motion.button
+                          className="mt-8 px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-red-500/50 flex items-center justify-center gap-2 group"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <span>Contact us</span>
+                          <motion.div
+                            whileHover={{ x: 5 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <ArrowRight className="w-5 h-5" />
+                          </motion.div>
+                        </motion.button>
+                      </Link>
+                    </div>
                 </div>
               </motion.div>
             )}
